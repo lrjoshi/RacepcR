@@ -34,17 +34,21 @@ y	:position where you want to start your 3' primer
 
 This package depends on Biostrings package. So, you should have already installed Biostrings package from Bioconductor.
 
-See Also
 
-https://github.com/lrjoshi/RacepcR
-
-Examples
+## Examples
 
 library (RacepcR)
+
 library(Biostrings)
-#function collection
+
+
 getDNA("aaggccttcc")
+
 quality ("aaggcct")
+
 gcbarplot("aaaaagccggt")
+
 get5prime("aaaggcggcggcttcggcgcgctcgtgctgctgctgcggcgctcctttcgctcgtcgctgctttctctcgct",30)
+
+
 get3prime("aaaggcggccccctcttcggccttcgctgctgctgcggcgcggctcgcgctgctgctttgctgctcgggctcgt",10)
