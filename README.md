@@ -16,11 +16,17 @@ install_github("lrjoshi/RacepcR")
 
 ## Usage
 
-getDNA(dnaseq)
-quality (dnaseq)
-gcbarplot(dnaseq)
-get5prime(dnaseq,x)
-get3prime(dnaseq,y)
+getDNA(dnaseq) #enter DNA Sequence and check length
+
+quality (dnaseq)  #to see if your sequence contains character other than AGTC. 
+
+gcbarplot(dnaseq)  #gives barplot of nucleotide content 
+
+get5prime(dnaseq,x)  #gives you 5' primer 
+
+get3prime(dnaseq,y)   #gives you 3' primer 
+
+
 Arguments
 
 dnaseq	: it is the sequence of your DNA. For eg : "aaggcctt"
