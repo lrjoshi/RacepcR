@@ -27,7 +27,7 @@ get5prime(dnaseq,x)  #gives you 5' primer
 get3prime(dnaseq,y)   #gives you 3' primer 
 
 
-Arguments
+## Arguments
 
 dnaseq	: it is the sequence of your DNA. For eg : "aaggcctt"
 
