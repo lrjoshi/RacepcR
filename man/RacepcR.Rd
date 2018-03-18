@@ -5,19 +5,29 @@
 Race PCR Primer Designer
 }
 \description{
-this package helps you to design RACE PCR Primers
+You can use this package to design 3' and 5'primers for Race PCR. The design is based on as described by Clonetech Race PCR manual. The resulting primers will have vector sequence automatically added to them.
 }
 \usage{
-RacepcR(x)
+getDNA(dnaseq)
+quality (dnaseq)
+gcbarplot(dnaseq)
+get5prime(dnaseq,x)
+get3prime(dnaseq,y)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{dnaseq}{
+it is the sequence of your DNA. For eg : "aaggcctt"
+}
+\item{x}{
+position where you want to start your 5' primer
+}
+\item{y}{
+position where you want to start your 3' primer
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
+\Dependency{
+
 }
 \value{
 %%  ~Describe the value returned
@@ -30,21 +40,28 @@ RacepcR(x)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+%%  Lok Raj Joshi
 }
 \note{
-%%  ~~further notes~~
+This package depends on Biostrings package. So, you should have already installed Biostrings package from Bioconductor.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+https://github.com/lrjoshi/RacepcR
 }
 \examples{
-
+library (RacepcR)
+library(Biostrings)
+#function collection
+getDNA("aaggccttcc")
+quality ("aaggcct")
+gcbarplot("aaaaagccggt")
+get5prime("aaaggcggcggcttcggcgcgctcgtgctgctgctgcggcgctcctttcgctcgtcgctgctttctctcgct",30)
+get3prime("aaaggcggccccctcttcggccttcgctgctgctgcggcgcggctcgcgctgctgctttgctgctcgggctcgt",10)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ ~RACEPCR }% use one of  RShowDoc("KEYWORDS")
+\keyword{ ~primers }% __ONLY ONE__ keyword per line
