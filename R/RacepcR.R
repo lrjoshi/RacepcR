@@ -61,7 +61,7 @@ gcbarplot<-function(dnaseq){
 get5prime<-function (dnaseq,primer5){
   primer5=as.integer(primer5)
   almost=substr(dnaseq,primer5-25,primer5)
-  ready=paste(almost,"GATTACGCCAAGCTT")
+  ready=paste("GATTACGCCAAGCTT",almost)
   #removespaces
   final=gsub(" ","",ready)
   print (paste("This is your five prime primer:",final))
@@ -74,7 +74,7 @@ get5prime<-function (dnaseq,primer5){
 get3prime<-function (dnaseq,primer3){
   primer3=as.integer(primer3)
   almost3=substr(dnaseq,primer3,primer3+25)
-  ready3=paste(almost3,"GATTACGCCAAGCTT")
+  ready3=paste("GATTACGCCAAGCTT",almost3)
   #removespaces
   final3=gsub(" ","",ready3)
   print (paste("This is your three prime primer:",final3))
@@ -84,7 +84,7 @@ get3prime<-function (dnaseq,primer3){
 #Thats all
 #function collection
 #getDNA("aaggccttcc")
-#quality ("aaggcct")
+quality ("aaggcct")
 #gcbarplot("aaaaagccggt")
 #get5prime("aaaggcggcggcttcggcgcgctcgtgctgctgctgcggcgctcctttcgctcgtcgctgctttctctcgct",30)
 #get3prime("aaaggcggccccctcttcggccttcgctgctgctgcggcgcggctcgcgctgctgctttgctgctcgggctcgt",10)
